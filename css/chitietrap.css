@@ -1,0 +1,167 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-image:url("../images/body_bg.png");
+}
+nav {
+	height: 120px;
+	background-image: url("../images/bg-top.png");
+}
+nav ul {
+	float: right;
+	margin-right: 25px;
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 50px;
+	margin: 25px 15px;
+}
+nav ul li a {
+	position: relative;
+	padding: 5px 0;
+	color: #222;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	color: red;
+}
+#label-1, #label-2 {
+	font-size: 50px;
+	color: #222;
+	float: right;
+	line-height: 70px;
+	margin-right: 30px;
+	cursor: pointer;
+	display: none;
+}
+#responsive-menu {
+	display: none;
+}
+@media screen and (max-width: 870px) {
+	nav {
+		height: 70px;
+	}
+	#label-1{
+		display: block;
+	}
+	nav ul {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background-color: crimson;
+		top: 70px;
+		left: -100%;
+		text-align: center;
+		transition: .5s;
+		z-index: 10;
+	}
+	nav ul li {
+		display: block;
+		margin: 40px 0;
+		line-height: 30px;
+	}
+	nav ul li a {
+		font-size: 20px;
+		padding: 0 15px 0 25px;
+	}
+	nav ul li a:hover {
+		color: black;
+	}
+	#responsive-menu:checked ~ ul {
+		left: 0;
+	}
+	#responsive-menu:checked ~ label #label-1 {
+		display: none;
+	}
+	#responsive-menu:checked ~ label #label-2 {
+		display: block;
+	}
+}
+.main {
+	border-bottom: 3px solid #241d1e;
+}
+.main .rap .title {
+	border-bottom: 3px solid #241d1e;
+	float: none;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.main .rap .title h1 {
+	color: #222;
+    font-size: 38px;
+    font-weight: normal;
+}
+@media screen and (max-width: 1920px) {.main .products-grid {
+	display: grid;
+	grid-row-gap: 50px;
+  	
+	grid-template-columns: 25% 25% 25% 25%;
+}
+  	
+}
+
+.main .products-grid .film-lists {
+  	padding-left: 50px;
+  	padding-top: 15px;
+	
+}
+.main .products-grid .film-lists .product-images img {
+	border: 6px solid #000000;
+}
+.main .products-grid .film-lists .product-info .product-name {
+	color: #636363;
+	font-style: normal;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+.main .products-grid .film-lists .product-info .product-name a {
+	color: #333 !important;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.info-bold {
+    font-weight: bold;
+    font-size: 17px;
+}
+.info-normal {
+    font-size: 18px;
+}
+.footer .footer-address {
+	clear: both;
+	color: #e6e6e6;
+	background-color: #404040;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 10px 0;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
+	
+
+}
+@media screen and (max-width: 870px) {
+	.main .products-grid {
+		display: grid;
+		grid-row-gap: 50px;
+  		
+  		grid-template-columns: 50% 50%;
+  		padding: 10px;
+	}
+}
+@media screen and (max-width: 375px) {
+	.main .products-grid {
+		display: grid;
+		grid-row-gap: 30px;
+  		
+  		grid-template-columns: auto;
+  		
+	}
+}

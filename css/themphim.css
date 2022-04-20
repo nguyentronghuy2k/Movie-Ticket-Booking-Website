@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image:url("../images/body_bg.png");
+}
+nav {
+	height: 120px;
+	background-image: url("../images/bg-top.png");
+	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+}
+nav ul {
+	float: right;
+	margin-right: 25px;
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 50px;
+	margin: 35px 15px 0;
+}
+nav ul li a {
+	position: relative;
+	padding: 5px 0;
+	color: #222;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	color: red;
+}
+#label-1, #label-2 {
+	font-size: 50px;
+	color: #222;
+	float: right;
+	line-height: 70px;
+	margin-right: 30px;
+	cursor: pointer;
+	display: none;
+}
+#responsive-menu {
+	display: none;
+}
+@media screen and (max-width: 870px) {
+	nav {
+		height: 70px;
+	}
+	#label-1{
+		display: block;
+	}
+	nav ul {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background-color: crimson;
+		top: 70px;
+		left: -100%;
+		text-align: center;
+		transition: .5s;
+		z-index: 10;
+	}
+	nav ul li {
+		display: block;
+		margin: 40px 0;
+		line-height: 30px;
+	}
+	nav ul li a {
+		font-size: 20px;
+		padding: 0 15px 0 25px;
+	}
+	nav ul li a:hover {
+		color: black;
+	}
+	#responsive-menu:checked ~ ul {
+		left: 0;
+	}
+	#responsive-menu:checked ~ label #label-1 {
+		display: none;
+	}
+	#responsive-menu:checked ~ label #label-2 {
+		display: block;
+	}
+}
+.main {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+.main .form-box {
+	width: 500px;
+	height: 650px;
+	position: relative;
+	margin: 4% auto;
+	padding: 5px;
+	background-color: #fdfcf0;;
+}
+.main .form-box .title {
+	margin-top: 30px;
+}
+.main .form-box .title h1 {
+	text-align: center;
+}
+.main .form-box .input-group {
+	top: 100px;
+	position: absolute;
+	width: 280px;
+	transition: .5s
+}
+.main .form-box .input-group .input-field {
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 100px;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+.main .form-box .input-group .submit-btn {
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: 15px 110px;
+	background-color: #e71a0f;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
